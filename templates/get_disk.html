@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+
+{% block title %}
+
+Storage
+
+{% endblock %}
+
+{% block headerlist %}
+
+{{ super() }}
+
+{% endblock %}
+
+{% block main %}
+
+<h2>Storage Capacity</h2>
+
+<h4>Block Device</h4>
+<div class="main-list">
+    <ul>
+        <table>
+            <thead>
+                <tr>
+                    <div class="main-list">
+                        <th colspan="7">Block Device</th>
+                    </div>
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in lsblk_result %}
+                <tr>
+                    <div class="main-list">
+                        <td>{{ i[0] }}</td>
+                        <td>{{ i[1] }}</td>
+                        <td>{{ i[2] }}</td>
+                        <td>{{ i[3] }}</td>
+                        <td>{{ i[4] }}</td>
+                        <td>{{ i[5] }}</td>
+                        <td>{{ i[6] }}</td>
+                    </div>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </ul>
+</div>
+
+<h4>Disk Usage</h4>
+<div class="main-list">
+    <ul>
+        <table>
+            <thead>
+                <tr>
+                    <div class="main-list">
+                        <th colspan="6">Disk Usage</th>
+                    </div>
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in df_result %}
+                <tr>
+                    <div class="main-list">
+                        <td>{{ i[0] }}</td>
+                        <td>{{ i[1] }}</td>
+                        <td>{{ i[2] }}</td>
+                        <td>{{ i[3] }}</td>
+                        <td>{{ i[4] }}</td>
+                        <td>{{ i[5] }}</td>
+                    </div>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </ul>
+</div>
+
+{% endblock %}

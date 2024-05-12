@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}
+
+SoC Temparature
+
+{% endblock %}
+
+{% block headerlist %}
+
+{{ super() }}
+
+{% endblock %}
+
+{% block main %}
+
+<div class="main">
+    <h2>SoC Temparature</h2>
+    <ul>
+        <h4>
+            <li>
+                <h3>{{result}}</h3>
+            </li>
+        </h4>
+    </ul>
+</div>
+
+{% endblock %}

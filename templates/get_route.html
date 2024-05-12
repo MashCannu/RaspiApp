@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title %}
+
+IP Routing Table
+
+{% endblock %}
+
+{% block headerlist %}
+
+{{ super() }}
+
+{% endblock %}
+
+{% block main %}
+
+<h2>IP Routing Table</h2>
+<div class="main-list">
+    <ul>
+        <table>
+            <thead>
+                <tr>
+                    <div class="main-list">
+                        <th colspan="8">Routing Table</th>
+                    </div>
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in result %}
+                <tr>
+                    <div class="main-list">
+                        <td>{{ i[0] }}</td>
+                        <td>{{ i[1] }}</td>
+                        <td>{{ i[2] }}</td>
+                        <td>{{ i[3] }}</td>
+                        <td>{{ i[4] }}</td>
+                        <td>{{ i[5] }}</td>
+                        <td>{{ i[6] }}</td>
+                        <td>{{ i[7] }}</td>
+                    </div>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </ul>
+</div>
+
+{% endblock %}

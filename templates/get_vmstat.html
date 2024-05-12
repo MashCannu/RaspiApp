@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block title %}
+
+vmstat
+
+{% endblock %}
+
+{% block headerlist %}
+
+{{ super() }}
+
+{% endblock %}
+
+{% block main %}
+
+<h2>vmstat</h2>
+<div class="main-list">
+    <ul>
+        <table>
+            <thead>
+                <tr>
+                    <div class="main-list">
+                        <th colspan="2">Proc</th>
+                        <th colspan="4">memory</th>
+                        <th colspan="2">swap</th>
+                        <th colspan="2">io</th>
+                        <th colspan="2">system</th>
+                        <th colspan="5">cpu</th>
+                    </div>
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in result %}
+                <tr>
+                    <div class="main-list">
+                        <td>{{ i[0] }}</td>
+                        <td>{{ i[1] }}</td>
+                        <td>{{ i[2] }}</td>
+                        <td>{{ i[3] }}</td>
+                        <td>{{ i[4] }}</td>
+                        <td>{{ i[5] }}</td>
+                        <td>{{ i[6] }}</td>
+                        <td>{{ i[7] }}</td>
+                        <td>{{ i[8] }}</td>
+                        <td>{{ i[9] }}</td>
+                        <td>{{ i[10] }}</td>
+                        <td>{{ i[11] }}</td>
+                        <td>{{ i[12] }}</td>
+                        <td>{{ i[13] }}</td>
+                        <td>{{ i[14] }}</td>
+                        <td>{{ i[15] }}</td>
+                        <td>{{ i[16] }}</td>
+                    </div>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </ul>
+</div>
+
+{% endblock %}

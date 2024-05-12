@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}
+
+Interface IP Address
+
+{% endblock %}
+
+{% block headerlist %}
+
+{{ super() }}
+
+{% endblock %}
+
+{% block main %}
+
+<h2>Interface IP Address</h2>
+<ul>
+    {% for if, addr in result.items()%}
+    <h4>
+        <li>{{ if }} : {{ addr }}</li>
+    </h4>
+    {% endfor %}
+</ul>
+
+{% endblock %}

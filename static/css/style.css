@@ -1,0 +1,89 @@
+body {
+    width: 800px;
+    height: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'M PLUS Rounded 1c', system-ui, sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    padding: 2px;
+}
+
+.header {
+    background-color: #B3304C;
+    color: whitesmoke;
+    height: 90px;
+}
+
+.header a,
+a:visited,
+a:hover {
+    color: inherit;
+}
+
+.header-img img {
+    height: 72px;
+    width: auto;
+    float: left;
+    padding: 10px 5px 10px 20px;
+}
+
+.header-logo {
+    float: left;
+    font-size: 36px;
+    padding: 20px 50px 20px 5px;
+}
+
+.header-list li {
+    float: right;
+    padding: 33px 15px;
+}
+
+.main {
+    height: auto;
+    width: auto;
+    font-family: 'Ubuntu Mono', monospace;
+}
+
+.main a,
+a:visited,
+a:hover {
+    color: inherit;
+}
+
+.main-list table {
+    table-layout: auto;
+    margin: 10px;
+}
+
+.main-list th {
+    padding: 3px;
+    border-bottom: 2px solid black;
+
+}
+
+.main-list td {
+    padding: 3px;
+}
+
+.footer {
+    background-color: #B3304C;
+    height: 40px;
+}
+
+.footer-copyright {
+    text-align: center;
+    color: whitesmoke;
+    padding: 5px 10px;
+    font-size: 10px;
+}

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}
+
+Login Authentication
+
+{% endblock %}
+
+{% block headerlist %}
+
+<div class="header-list">
+    <ul>
+        <li><a href="https://www.raspberrypi.com/documentation/" target="_blank" rel="noopener noreferrer">LINK</a></li>
+        <li><a href="{{ url_for('index') }}">HOME</a></li>
+    </ul>
+</div>
+
+{% endblock %}
+
+{% block main %}
+
+<h2>Login Authentication</h2>
+<h3>Please input User ID and Password!</h3>
+<form method="POST" action="/logincheck">
+    <p><input placeholder="User ID" type="text" name="user_id"></p>
+    <p><input placeholder="Password" type="password" name="password"></p>
+    <p><input type="submit" value="SEND"></p>
+</form>
+
+{% endblock %}
